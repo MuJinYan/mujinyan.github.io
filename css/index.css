@@ -1311,3 +1311,40 @@ p#back-to-top a span{
 #back-to-top a:hover span{
     background:transparent url(../images/return-to-top.png) no-repeat 8px;
 }
+@media screen and (max-width: 768px) {
+    p#back-to-top{
+        position: fixed;
+        display: none;
+        bottom: 100px;
+        right: 0;
+        z-index: 9999;
+    }
+    p#back-to-top a{
+        text-align:center;
+        text-decoration:none;
+        color:#d1d1d1;
+        display:block;
+        width:20px;
+        -moz-transition:color 1s;
+        -webkit-transition:color 1s;
+        -o-transition:color 1s;
+        background: #000000;
+    }
+    p#back-to-top a:hover{
+        color:#979797;
+    }
+    p#back-to-top a span{
+        background:transparent;
+        border-radius:6px;
+        display:block;
+        height:50px;
+        width:50px;
+        margin-bottom:5px;
+        -moz-transition:background 1s;
+        -webkit-transition:background 1s;
+        -o-transition:background 1s;
+    }
+    #back-to-top a:hover span{
+        background:transparent;
+    }
+}
