@@ -179,3 +179,34 @@
 <script src="js/jquery.flexslider-min.js"></script>
 <script src="js/baidu_map.js"></script>
 <script src="js/index.js"></script>
+<script type="text/javascript">   
+      $(function(){
+       getTotalPV();
+    });
+    function getTotalPV()
+    {
+        $.ajax({ 
+            url:"http://cloud.bmob.cn/cfe90d4a61ffe9a1/getTotalPV", 
+            dataType:'jsonp', 
+            data:'', 
+            jsonp:'callback', 
+            success:function(result) { 
+                   //result.results[0].totalPV
+               console.log(result.results[0].totalPV);
+               //更新次数
+               setTotalPV();
+            }     
+        });    
+    }  
+    function setTotalPV()
+    {
+      $.ajax({ 
+            url:"http://cloud.bmob.cn/cfe90d4a61ffe9a1/setTotalPV", 
+            dataType:'jsonp', 
+            data:'', 
+            jsonp:'callback', 
+            success:function(result) {               
+            }     
+        });
+    }
+</script>
