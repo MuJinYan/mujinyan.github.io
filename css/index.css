@@ -1323,6 +1323,7 @@ p#back-to-top a span{
         color:#979797;
     }
     p#back-to-top a span{
+        background:transparent;
         height:20px;
         width:20px;
     }
